@@ -1,1 +1,1 @@
-# mhdaslmnzr.github.io
+# mhdaslmnzr.space
