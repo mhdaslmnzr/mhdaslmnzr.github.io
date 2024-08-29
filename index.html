@@ -1,46 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <title>Mohammed Aslam - Cyber Threat Intelligence Analyst & Full Stack Developer</title>
-  <meta name="keywords" content="Cyber Threat Intelligence, Full Stack Developer, Portfolio">
-  <meta name="description" content="Welcome to Mohammed Aslam's personal website. Explore my work, projects, and get in touch.">
-  <link rel="icon" href="images/d.jpg" type="image/x-icon" sizes="16x16">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-  <header>
-    <button id="darkModeToggle" aria-label="Toggle dark mode">
-      <i class="fa fa-moon-o" aria-hidden="true"></i>
-    </button>
-  </header>
-  
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Mohammed Aslam</h1>
-        <h2>Cyber Threat Intelligence Analyst <span>| Full Stack Developer</span></h2>
-        <p>Sipping coffee while diving into the latest threat reports or binge-watching classic films? That's my kind of day. When I'm not exploring new tech adventures, you'll find me cruising on my Royal Enfield Himalayan, chasing scenic roads and unforgettable views. A true cinephile and astrophile, I'm always up for stargazing, dreaming about the universe, or getting lost in an epic sci-fi audiobook. Whether it's the thrill of a hackathon or the serenity of a long ride, I'm all about embracing life's greatest experiences!</p>
-        <div class="contact-info">
-          <a href="https://github.com/mhdaslmnzr" class="contact-link" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i> mhdaslmnzr</a>
-          <a href="https://linkedin.com/in/mhdaslmnzr" class="contact-link" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i> mhdaslmnzr</a>
-          <a href="mailto:mhdaslmnzr@gmail.com" class="contact-link"><i class="fa fa-envelope" aria-hidden="true"></i> mhdaslmnzr@gmail.com</a>
-          <a href="tel:+919539333732" class="contact-link"><i class="fa fa-phone" aria-hidden="true"></i> +91 9539333732</a>
-          <span class="contact-link"><i class="fa fa-map-marker" aria-hidden="true"></i> India</span>
-        </div>
-        <form action="cv/cv.pdf" method="get" target="_blank">
-          <button class="button-49" type="submit">Look at my CV</button>
-        </form>
-      </div>
-    </section>
-  </main>
+<html lang="en-us">
 
-  <script src="js/scripts.js"></script>
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Mohammed Aslam - Cyber Threat Intelligence Analyst & Full Stack Developer</title>
+    <meta name="keywords" content="Cyber Threat Intelligence, Full Stack Developer, Portfolio">
+    <meta name="description" content="Welcome to Mohammed Aslam's personal website. Explore my work, projects, and get in touch.">
+
+    <!-- Web fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Space Mono', monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #f4f4f4;
+        }
+
+        .page-border {
+            border: 5px solid transparent;
+            border-image: linear-gradient(to right, #ff7e5f, #feb47b);
+            border-image-slice: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-weight: 700;
+        }
+
+        h1 span {
+            font-weight: 400;
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+
+        .location-icon::before {
+            content: "\f041"; /* FontAwesome map marker icon */
+            font-family: FontAwesome;
+            margin-right: 8px;
+        }
+
+        .align--center {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .btn--default {
+            background-color: #ff7e5f;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn--default:hover {
+            background-color: #feb47b;
+        }
+
+        footer ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer ul li {
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+        }
+
+        footer ul li a .icon {
+            margin-right: 8px;
+        }
+
+        /* Dark mode toggle */
+        #darkModeToggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="darkModeToggle" aria-label="Toggle dark mode">
+        <i class="fa fa-moon-o" aria-hidden="true"></i>
+    </button>
+
+    <div class="page-border">
+        <div class="bg--white">
+
+            <!-- Header -->
+            <header class="align--center pt3 pb2">
+                <div class="container">
+                    <h1 class="mb3 reveal-on-scroll is-revealing">Mohammed <span>Aslam</span></h1>
+                    <h2 class="mb3 reveal-on-scroll is-revealing">Cyber Threat Intelligence Analyst <span>| Full Stack Developer</span></h2>
+                    <p class="mb1">Sipping coffee while diving into the latest threat reports or binge-watching classic films? That's my kind of day. When I'm not exploring new tech adventures, you'll find me cruising on my Royal Enfield Himalayan, chasing scenic roads and unforgettable views. A true cinephile and astrophile, I'm always up for stargazing, dreaming about the universe, or getting lost in an epic sci-fi audiobook. Whether it's the thrill of a hackathon or the serenity of a long ride, I'm all about embracing life's greatest experiences!</p>
+                    <p class="location-icon">India</p>
+                </div>
+            </header>
+
+            <!-- Body -->
+            <main>
+                <div class="container align--center">
+                    <section class="align--center pt3 pb3">
+                        <a href="cv/cv.pdf" class="btn btn--default reveal-on-scroll is-revealing">Look at my Resume →</a>
+                    </section>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="mt2 pb3 align--center">
+                <ul class="no-bullets list--inline mb0">
+                    <li><a href="https://github.com/mhdaslmnzr" class="link"><i class="fa fa-github icon" aria-hidden="true"></i> GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/mhdaslmnzr" class="link"><i class="fa fa-linkedin icon" aria-hidden="true"></i> LinkedIn</a></li>
+                    <li><a href="mailto:mhdaslmnzr@gmail.com" class="link"><i class="fa fa-envelope icon" aria-hidden="true"></i> Email</a></li>
+                    <li><a href="tel:+919539333732" class="link"><i class="fa fa-phone icon" aria-hidden="true"></i> Phone</a></li>
+                    <li><span class="link"><i class="fa fa-map-marker icon" aria-hidden="true"></i> India</span></li>
+                </ul>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- JavaScript for dark mode toggle -->
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
+
 </html>
